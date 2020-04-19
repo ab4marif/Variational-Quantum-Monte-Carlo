@@ -37,7 +37,6 @@ useful.
 - The trial wave function will be $\exp{-{\alpha}x^{2}}$. For the harmonic oscillator there is already a data of numerical data to compare with in the book of Dr.J.Thijssen. By Kadhim 
 
 - The trial wavefunction will be used in the local energy to get a valid expression. By Achmed
-
 -The Monte carlo method is then used to calculate the integral by summing over the samples obtained by the Metropolis smapling mehtod. By Kadhim
 
 - 
