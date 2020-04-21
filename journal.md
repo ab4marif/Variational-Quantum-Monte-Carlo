@@ -43,7 +43,7 @@ useful.
 - The overall acceptance rate will be observed by counting the accepted moved and dividing that to the total moves done. by Achmed
 
 - The expected energy will be calculated using np.mean and it will be done for different alphas corresponding to the alphas also used by jos thijsen to compare the results with.
-- 
+
 
 
 ## Progress
@@ -53,6 +53,8 @@ useful.
 
 - we tuned the metropolis algorithm so that it had a reasonable total acceptance rate of 0.647. This was done by varying the initial move of the walkers inside a box,
 The code to this is :`displacement = 0.8*np.random.randn(N_tries, N_walkers, D)` which is located in the `Metropolis.py` file.
+
+- For checking the condition that for a given move it is acceptable or not the function `np.where()` was used. This helped speed up the code compared to a for loop.
 
 - We calculated the expectation energy with `maincode.py` for diffrent alphas the results are: E(alpha) = [0.5124047  0.50288855 0.5        0.50231386 0.50834459], for alpha = [0.4  0.45 0.5  0.55 0.6 ]
 With variance of : sigma = [0.0252834  0.00560066 0.         0.00454688 0.01681602]
