@@ -42,7 +42,7 @@ useful.
 
 - The overall acceptance rate will be observed by counting the accepted moved and dividing that to the total moves done. by Achmed
 
-- The expected energy will be calculated using np.mean and it will be done for different alphas corresponding to the alphas also used by jos thijsen to compare the results with.
+- The expected energy will be calculated using `np.mean()` and it will be done for different alphas corresponding to the alphas also used by jos thijsen to compare the results with.
 
 
 
