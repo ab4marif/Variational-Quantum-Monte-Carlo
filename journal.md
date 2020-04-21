@@ -54,7 +54,12 @@ useful.
 - we tuned the metropolis algorithm so that it had a reasonable total acceptance rate of 0.647. This was done by varying the initial move of the walkers inside a box,
 The code to this is :`displacement = 0.8*np.random.randn(N_tries, N_walkers, D)` which is located in the `Metropolis.py` file.
 
-- 
+- We calculated the expectation energy using `Metropolis.py` for diffrent alphas the results are:
+
+`alpha = [0.4  0.45 0.5  0.55 0.6 ]
+E(alpha) = [0.5124047  0.50288855   0.5        0.50231386 0.50834459]
+sigma = [0.0252834  0.00560066      0.         0.00454688 0.01681602]
+Acceptance rate : 0.6471240833333334`
 
 
 ## Week 2
