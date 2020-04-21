@@ -37,11 +37,24 @@ useful.
 - The trial wave function will be $\exp{-{\alpha}x^{2}}$. For the harmonic oscillator there is already a data of numerical data to compare with in the book of Dr.J.Thijssen. By Kadhim 
 
 - The trial wavefunction will be used in the local energy to get a valid expression. By Achmed
--The Monte carlo method is then used to calculate the integral by summing over the samples obtained by the Metropolis smapling mehtod. By Kadhim
 
+- The Monte carlo method is then used to calculate the integral by summing over the samples obtained by the Metropolis smapling mehtod. By Kadhim
+
+- The overall acceptance rate will be observed by counting the accepted moved and dividing that to the total moves done. by Achmed
+
+- The expected energy will be calculated using np.mean and it will be done for different alphas corresponding to the alphas also used by jos thijsen to compare the results with.
 - 
 
 
+## Progress
+
+
+
+
+- we tuned the metropolis algorithm so that it had a reasonable total acceptance rate of 0.647. This was done by varying the initial move of the walkers inside a box,
+The code to this is :`displacement = 0.8*np.random.randn(N_tries, N_walkers, D)` which is located in the `Metropolis.py` file.
+
+- 
 
 
 ## Week 2
