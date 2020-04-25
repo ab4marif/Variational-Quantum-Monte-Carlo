@@ -67,7 +67,7 @@ With variance of : sigma = [0.0252834  0.00560066 0.         0.00454688 0.016816
 - We have to add more examples to calculalte. For example, Hydrogen atom and also implement the helium atom.
 - Have to tune the acceptance rate for each of them.
 - We will add docstrings to the code.
-- 
+- Have to add error calculation for the energy and variance of energy.
 
 ## Progress:
 - added the hydrogen and helium atom, since this are now in 3D we had to take this into account while calculating the trail wave function and local energy. Since we only use the variable 'r'.
