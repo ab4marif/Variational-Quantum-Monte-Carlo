@@ -64,6 +64,21 @@ With variance of : sigma = [0.0252834  0.00560066 0.         0.00454688 0.016816
 ## Week 2
 (due before 28 April)
 
+- We have to add more examples to calculalte. For example, Hydrogen atom and also implement the helium atom.
+- Have to tune the acceptance rate for each of them.
+- We will add docstrings to the code.
+- 
+
+## Progress:
+- added the hydrogen and helium atom, since this are now in 3D we had to take this into account while calculating the trail wave function and local energy. Since we only use the variable 'r'.
+So we had to use the magnitude of the r vector with the code: `r = np.linalg.norm(r, axis = 1, keepdims = True)` since r is in dimension (N_walkers,Dimension).
+
+- For the helium atom there are 2 electrons each in 3 dimension. To still have only 1 r as an variable, we make the r matrix into a (N_walkers, 6). So we make it 6 dimensional,
+and we use the first 3 rows for the 1st electron and the final 3 the 2nd electron with the code: `r1 = np.linalg.norm(r[:,:3], axis = 1, keepdims = True)`, `r2 = np.linalg.norm(r[:,3:], axis = 1, keepdims = True)`.
+
+- The Energies were calculated for different alphas and the results is visible in the `maincode.ipynb` [](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/maincode.ipynb)
+Comparing the values the the values of Jos Thijsen, we see that there is a very good correpondes. Only the overall acceptance rate for the hydrogen atom is a bit too high, and the one for the helium atom is too little.
+This has to be adjusted by varying `displacement = 0.8*np.random.randn(N_tries, N_walkers, D)` code in the `Metropolis.py` file.
 
 ## Week 3
 (due before 5 May)
