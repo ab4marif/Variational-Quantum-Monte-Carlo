@@ -82,9 +82,9 @@ This has to be adjusted by varying `displacement = 0.8*np.random.randn(N_tries, 
 - The results from `maincode.ipynb` ground state energy for harmonic oscillator, hydrogen atom and Helium atom with error bars included.
 - ![alt text](Plots_journal/Harmonic_oscillator_energy_groundstate.png)
 
-![alt text](Plots_journal/Hydrogen_energy_groundstate_1.png)
+![alt text](Plots_journal/Hydrogen_energy_groundstate.png)
 
-![alt text](Plots_journal/Helium_energy_groundstate.png)
+![alt text](Plots_journal/Helium_energy_groundstate_1.png)
 
 - It seems that both the harmonic oscillator and hydrogen atom are in agreement with the literature of jos thijsen and also with the analytical values. For the 
 Harmonic oscillator the analitical value is E = 0.5 which in the graph is also noticable. For Hydrogen atom the analitcal value is E = -0.5 again in correspondence with our simulation.
