@@ -1,11 +1,11 @@
 import numpy as np
 
 
-def metropolis_algorithm(function, N_tries, N_walkers, D):
+def metropolisAlgorithm(function, N_tries, N_walkers, D):
 
     r_initial = np.random.randn(N_walkers, D)
     r_final = np.zeros((N_tries, N_walkers, D))
-    displacement = 1.2*np.random.randn(N_tries, N_walkers, D)
+    displacement = 0.5*np.random.randn(N_tries, N_walkers, D)
     coin_flip = np.random.uniform(0, 1, (N_tries, N_walkers, D))
 
     # these will help to obtain the acceptance rate
