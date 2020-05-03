@@ -111,9 +111,6 @@ To still store them we had to append the values to a python list and later conve
 - We were able to minimize the alpha for the 3 systems and here are the results:
 
 - Harmonic Oscillator: ![alt text](Plots_journal/min_Oscillator.png) 
-The energy was found to be minimal with α = 1.0006923807993058
-The corresponding Energy is E = -0.5000281032669579 +/- 1.1713295887720727e-05
-With variance var = 1.3647955925798916e-06 +/- 2.215190360760522e-07
 
 - Hydrogen atom: ![alt text](Plots_journal/min_Hydrogen.png)
 
@@ -123,3 +120,10 @@ With variance var = 1.3647955925798916e-06 +/- 2.215190360760522e-07
 - These results were obtained by running the [`OptimalEnergy.ipynb`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/OptimalEnergy.ipynb) file. The output with the optimal enrgies is also given there.
 The results for the harmonic oscillator and the Hydrogen atom look as expected with the Energy approaching 0.5 and -0.5 respectively, with that their variance also go to zero as the aproach these values.
 With the helium atom however the variance increases for smaller values of alpha, and because it has quite a large error in the energy. This might be because our trail wave function is not optimal.
+
+- For Helium:
+- The energy was found to be minimal with α = 0.14621354922559449
+-The corresponding Energy is E = -2.8793613408643153 +/- 0.0036507916668288925
+-With variance var = 0.11237549675719637 +/- 0.001515418746446301 
+
+
