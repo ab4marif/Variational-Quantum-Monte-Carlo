@@ -93,4 +93,15 @@ Also the Helium atom is in accordance with the literature, we would expect a min
 ## Week 3
 (due before 5 May)
 
+- Explain how our code fulfills the detailed balance
+- Add doctrings
+- Fix the acceptance rate issue with Helium atom
+- Implement steepest descent method to find the optimal Energy
+- minimize alpha and the energy and plot the results
+
+
+## Progress:
+
+- There was an issue with the Helium atom simulation where the acceptance rate would go above 1. We forgot to include the dimension in the calculating of the acceptance rate
+We added it to the code: `rate = accept/(N_tries*N_walkers*D)` where the addition od the D is the fix, in the [`Metropolis.py`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/Functions/Metropolis.py) file.
 
