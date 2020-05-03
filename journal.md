@@ -110,7 +110,10 @@ To still store them we had to append the values to a python list and later conve
 
 - We were able to minimize the alpha for the 3 systems and here are the results:
 
-- Harmonic Oscillator: ![alt text](Plots_journal/min_Oscillator.png)
+- Harmonic Oscillator: ![alt text](Plots_journal/min_Oscillator.png) 
+The energy was found to be minimal with α = 1.0006923807993058
+The corresponding Energy is E = -0.5000281032669579 +/- 1.1713295887720727e-05
+With variance var = 1.3647955925798916e-06 +/- 2.215190360760522e-07
 
 - Hydrogen atom: ![alt text](Plots_journal/min_Hydrogen.png)
 
