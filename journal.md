@@ -123,7 +123,7 @@ With the helium atom however the variance increases for smaller values of alpha,
 
 - For Helium:
 - The energy was found to be minimal with α = 0.14621354922559449
--The corresponding Energy is E = -2.8793613408643153 +/- 0.0036507916668288925
--With variance var = 0.11237549675719637 +/- 0.001515418746446301 
+- The corresponding Energy is E = -2.8793613408643153 +/- 0.0036507916668288925
+- With variance var = 0.11237549675719637 +/- 0.001515418746446301 
 
 
