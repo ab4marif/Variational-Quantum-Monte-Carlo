@@ -14,9 +14,11 @@ def bootstrapError(data, N_error):
 
     Returns:
     --------
-    data_error:      error of the data
-
+    error_data:         error of the data
+    variance:           Variance of data
+    error_var:          error of the variance
     """
+
     N_subset = 10000
     data_subset = np.random.choice(data, (N_subset, N_error))
 
