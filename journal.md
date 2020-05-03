@@ -117,4 +117,6 @@ To still store them we had to append the values to a python list and later conve
 - Helium Atom: ![alt text](Plots_journal/min_Helium.png)
 
 
-- With the harmonic osci
+- These results were obtained by running the [`OptimalEnergy.ipynb`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/OptimalEnergy.ipynb) file. The output with the optimal enrgies is also given there.
+The results for the harmonic oscillator and the Hydrogen atom look as expected with the Energy approaching 0.5 and -0.5 respectively, with that their variance also go to zero as the aproach these values.
+With the helium atom however the variance increases for smaller values of alpha, and because it has quite a large error in the energy. This might be because our trail wave function is not optimal.
