@@ -105,4 +105,16 @@ Also the Helium atom is in accordance with the literature, we would expect a min
 - There was an issue with the Helium atom simulation where the acceptance rate would go above 1. We forgot to include the dimension in the calculating of the acceptance rate
 We added it to the code: `rate = accept/(N_tries*N_walkers*D)` where the addition od the D is the fix, in the [`Metropolis.py`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/Functions/Metropolis.py) file.
 
-- For the mimimalization we used the steepest descent method, the new alpha was found with the old alpha and the derivative of the energy: α_new = α_old − γ*(dE/dα)_old. Because we use a while loop to search for the optimal value, we cannot initialize numpy arrays to store the values found. To still store them we had to append the values to a python list and later convert them into numpy arrays with: 
+- For the mimimalization we used the steepest descent method, the new alpha was found with the old alpha and the derivative of the energy: α_new = α_old − γ*(dE/dα)_old. Because we use a while loop to search for the optimal value, we cannot initialize numpy arrays to store the values found.
+To still store them we had to append the values to a python list and later convert them into numpy arrays with: `Eloc_values = np.array(Eloc_values)` of the minimalAlphaFinder function in the [`Mimimalization.py`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/Functions/Minimalization.py) file.
+
+- We were able to minimize the alpha for the 3 systems and here are the results:
+
+- Harmonic Oscillator: ![alt text](Plots_journal/min_Oscillator.png)
+
+- Hydrogen atom: ![alt text](Plots_journal/min_Hydrogen.png)
+
+- Helium Atom: ![alt text](Plots_journal/min_Helium.png)
+
+
+- With the harmonic osci
