@@ -105,3 +105,4 @@ Also the Helium atom is in accordance with the literature, we would expect a min
 - There was an issue with the Helium atom simulation where the acceptance rate would go above 1. We forgot to include the dimension in the calculating of the acceptance rate
 We added it to the code: `rate = accept/(N_tries*N_walkers*D)` where the addition od the D is the fix, in the [`Metropolis.py`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/Functions/Metropolis.py) file.
 
+- For the mimimalization we used the steepest descent method, the new alpha was found with the old alpha and the derivative of the energy: \alpha
