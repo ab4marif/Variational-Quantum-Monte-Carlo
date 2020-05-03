@@ -51,7 +51,6 @@ def subplotEnergyVariance(alpha, E_a, E_error, E_var, var_error):
 
     plt.show()
 
-    
 def subplotEnergyVarianceAlpha(alpha, E_a, E_error, E_var, var_error, count, plotsave):
 
     gs = gridspec.GridSpec(2, 2)
