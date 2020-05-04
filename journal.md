@@ -101,6 +101,10 @@ Also the Helium atom is in accordance with the literature, we would expect a min
 
 
 ## Progress:
+- For the detailed balance to hold, the probability of going back and forth has to be the same. So the probability that a walker on x is displaced to x' has to be the same as going from x' to x.
+For the displacement we use the following code: `displacement = 0.3*np.random.randn(N_tries, N_walkers, D)` in [`Metropolis.py`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/Functions/Metropolis.py).
+This means that our displacement is randomly chosen from the normal distribution for each dimension. Here we use cartisian coordinates for the dimensions x,y and z. The displacement on each axis has the same probabilty, essentially making a rectangular box in which the walker can move in.
+With this we can argue that the probability of a displacement in a given direction is the same as going back.
 
 - There was an issue with the Helium atom simulation where the acceptance rate would go above 1. We forgot to include the dimension in the calculating of the acceptance rate
 We added it to the code: `rate = accept/(N_tries*N_walkers*D)` where the addition od the D is the fix, in the [`Metropolis.py`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/Functions/Metropolis.py) file.
