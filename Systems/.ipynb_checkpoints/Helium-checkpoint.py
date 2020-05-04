@@ -2,7 +2,12 @@ import numpy as np
 """ This file contains the System information about the Helium atom.
 """
 
-alpha = np.arange(0.05, 0.25, 0.025)
+# alpha values to compare with Jos Thijsen
+alpha_jos = np.arange(0.05, 0.25, 0.025)
+
+# broader range of alphas to plot
+alpha_broad = np.arange(0.05, 0.25, 0.015)
+
 dimension = 6
 
 def trialWaveFunction(alpha, r):

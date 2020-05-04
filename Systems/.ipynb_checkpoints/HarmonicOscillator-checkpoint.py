@@ -2,9 +2,12 @@ import numpy as np
 """ This file contains the System information about the Harmonic oscillator.
 """
 
+# alpha values to compare with Jos Thijsen
+alpha_jos = np.array([0.4, 0.45, 0.5, 0.55, 0.6])
 
-alpha = np.array([0.4, 0.45, 0.5, 0.55, 0.6])
-#alpha = np.arange(0.2, 0.8, 0.05)
+# broader range of alphas to plot
+alpha_broad = np.arange(0.2, 0.8, 0.05)
+
 dimension = 1
 
 def trialWaveFunction(alpha, r):

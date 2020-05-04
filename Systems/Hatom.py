@@ -2,7 +2,11 @@ import numpy as np
 """ This file contains the System information about the Hydrogen atom.
 """
 
-alpha = np.array([0.8, 0.9, 1, 1.1, 1.2])
+# alpha values to compare with Jos Thijsen
+alpha_jos = np.array([0.8, 0.9, 1, 1.1, 1.2])
+
+alpha_broad = np.arange(0.5, 1.5, 0.05)
+
 dimension = 3
 
 def trialWaveFunction(alpha, r):
