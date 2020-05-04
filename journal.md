@@ -93,4 +93,37 @@ Also the Helium atom is in accordance with the literature, we would expect a min
 ## Week 3
 (due before 5 May)
 
+- Explain how our code fulfills the detailed balance
+- Add doctrings
+- Fix the acceptance rate issue with Helium atom
+- Implement steepest descent method to find the optimal Energy
+- minimize alpha and the energy and plot the results
+
+
+## Progress:
+
+- There was an issue with the Helium atom simulation where the acceptance rate would go above 1. We forgot to include the dimension in the calculating of the acceptance rate
+We added it to the code: `rate = accept/(N_tries*N_walkers*D)` where the addition od the D is the fix, in the [`Metropolis.py`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/Functions/Metropolis.py) file.
+
+- For the mimimalization we used the steepest descent method, the new alpha was found with the old alpha and the derivative of the energy: α_new = α_old − γ*(dE/dα)_old. Because we use a while loop to search for the optimal value, we cannot initialize numpy arrays to store the values found.
+To still store them we had to append the values to a python list and later convert them into numpy arrays with: `Eloc_values = np.array(Eloc_values)` of the minimalAlphaFinder function in the [`Mimimalization.py`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/Functions/Minimalization.py) file.
+
+- We were able to minimize the alpha for the 3 systems and here are the results:
+
+- Harmonic Oscillator: ![alt text](Plots_journal/min_Oscillator.png) 
+
+- Hydrogen atom: ![alt text](Plots_journal/min_Hydrogen.png)
+
+- Helium Atom: ![alt text](Plots_journal/min_Helium.png)
+
+
+- These results were obtained by running the [`OptimalEnergy.ipynb`](https://gitlab.kwant-project.org/computational_physics_projects/Project-2---QMC_N_mido1/-/blob/master/OptimalEnergy.ipynb) file. The output with the optimal enrgies is also given there.
+The results for the harmonic oscillator and the Hydrogen atom look as expected with the Energy approaching 0.5 and -0.5 respectively, with that their variance also go to zero as the aproach these values.
+With the helium atom however the variance increases for smaller values of alpha, and because it has quite a large error in the energy. This might be because our trail wave function is not optimal.
+
+- For Helium:
+- The energy was found to be minimal with α = 0.14621354922559449
+- The corresponding Energy is E = -2.8793613408643153 +/- 0.0036507916668288925
+- With variance var = 0.11237549675719637 +/- 0.001515418746446301 
+
 
