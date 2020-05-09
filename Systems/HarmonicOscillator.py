@@ -10,7 +10,7 @@ alpha_broad = np.arange(0.2, 0.8, 0.05)
 
 dimension = 1
 
-def trialWaveFunction(alpha, r):
+def trial_wave_function(alpha, r):
     """ Trail wave function of the harmonic oscillator.
 
     Parameters
@@ -41,13 +41,12 @@ def E_loc(alpha, r):
     """
     return alpha + (0.5-2*alpha**2)*r**(2)
 
-def dWaveFunction(r):
+def deriv_wave_function(r):
     """ The derivative of the natural logarithm of the trail wave function. Needed for the minimal alpha finder.
 
     Parameters
     ----------
     r:              numpy array of the position of the oscillator
-
 
     Returns:
     --------

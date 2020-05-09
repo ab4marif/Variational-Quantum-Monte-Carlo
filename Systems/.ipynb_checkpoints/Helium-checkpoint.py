@@ -10,17 +10,17 @@ alpha_broad = np.arange(0.05, 0.25, 0.015)
 
 dimension = 6
 
-def trialWaveFunction(alpha, r):
+def trial_wave_function(alpha, r):
     """ Trail wave function of the Helium atom.
 
     Parameters
     ----------
     alpha:          int; parameter of the trail wave function to be varied
-    r:              position of the electron orbiting the atom.
-                    dim = (N_walkers, 6), where N_walkers are the number of walkers
-                    6 is taken as the dimension of the system. Then the first 3 dimensions are the 1st electron
-                    r[:,:3] = 1st electron
-                    r[:,3:] = 2nd electron
+    r:              matrix of shape (N_tries*N_walkers-N_walkers*4000) x 6
+                     N_tries , number of steps
+                     N_walkers , number of walkers
+                     :3 x (N*n_walkers-n_walkers*4000) , distance between proton and electron 1
+                     3: x (N*n_walkers-n_walkers*4000) , distance between proton and electron 2
 
 
 
@@ -42,11 +42,11 @@ def E_loc(alpha, r):
     Parameters
     ----------
     alpha:          int; parameter of the trail wave function to be varied
-    r:              position of the electron orbiting the atom.
-                    dim = (N_tries, N_walkers, 6), where N_walkers are the number of walkers, N_tries are number of steps taken
-                    6 is taken as the dimension of the system.
-                    r[:,:3] = 1st electron
-                    r[:,3:] = 2nd electron
+    r:              matrix of shape (N_tries*N_walkers-N_walkers*4000) x 6
+                     N_tries , number of steps
+                     N_walkers , number of walkers
+                     :3 x (N*n_walkers-n_walkers*4000) , distance between proton and electron 1
+                     3: x (N*n_walkers-n_walkers*4000) , distance between proton and electron 2
 
 
 
@@ -65,17 +65,18 @@ def E_loc(alpha, r):
     return E_loc
 
 
-def dWaveFunction(alpha, r):
-    """ he derivative of the natural logarithm of the trail wave function. Needed for the minimal alpha finder.
+def deriv_wave_function(alpha, r):
+    """ The derivative of the natural logarithm of the trail wave function with respec to alpha.
+        Needed for the optimal alpha finder.
 
     Parameters
     ----------
     alpha:          int; parameter of the trail wave function to be varied
-    r:              position of the electron orbiting the atom.
-                    dim = (N_walkers, 6), where N_walkers are the number of walkers
-                    6 is taken as the dimension of the system. Then the first 3 dimensions are the 1st electron
-                    r[:,:3] = 1st electron
-                    r[:,3:] = 2nd electron
+    r:              matrix of shape (N_tries*N_walkers-N_walkers*4000) x 6
+                     N_tries , number of steps
+                     N_walkers , number of walkers
+                     :3 x (N*n_walkers-n_walkers*4000) , distance between proton and electron 1
+                     3: x (N*n_walkers-n_walkers*4000) , distance between proton and electron 2
 
 
 
