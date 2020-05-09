@@ -1,7 +1,7 @@
 import numpy as np
 
 
-def metropolisAlgorithm(function, N_tries, N_walkers, D):
+def metropolis_algorithm(function, N_tries, N_walkers, D):
     """ This function performs the metroplolis algorithm for important sampling. it sets N number of walkers in a random position
         It makes a random trail move. The trail function is evauluted at the new configuration and its ratio sqaured with the old
         configuration is calculated. p = [ψT(R)/ψT(R)]2. If p < 1: the new position is accepted with probability p;
@@ -47,3 +47,5 @@ def metropolisAlgorithm(function, N_tries, N_walkers, D):
 
     r_shape = np.reshape(r_final[4000:,:], (N_tries*N_walkers -N_walkers*4000, D))     # trow out first 4000 ensuiring equiliburm
     return (r_shape, rate)
+
+import numpy as np
