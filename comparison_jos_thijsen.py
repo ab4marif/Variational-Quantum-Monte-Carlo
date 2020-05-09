@@ -51,8 +51,8 @@ def VMC(N_walkers, N_tries, System, plot_setting):
 
 # Simulation parameters
 System = Oscillator
-N_tries = 10000
-N_walkers = 50
+N_tries = 30000
+N_walkers = 400
 
 # plot settings
 plots = True
