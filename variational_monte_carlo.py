@@ -46,11 +46,10 @@ def VMC(N_walkers, N_tries, System, plot_setting):
         plot_energy(alpha, E_a, E_error, plotsave)
         plot_variance(alpha, E_var, plotsave)
 
-
 # Simulation parameters
-System = Helium
-N_tries = 10000
-N_walkers = 50
+System = Helium                 # please Choose: Oscillator, Hydrogen or Helium.
+N_tries = 30000
+N_walkers = 400
 
 # plot settings
 plots = True

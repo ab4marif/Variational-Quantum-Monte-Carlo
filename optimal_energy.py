@@ -58,9 +58,9 @@ def optimal_energy_finder(alpha_guess, N_walkers, N_tries, System, plot_setting)
 
 
 # System parameters
-System = Oscillator
-N_tries = 10000
-N_walkers = 50
+System = Oscillator             # please choose: Oscillator, Hydrogen or Helium.
+N_tries = 30000
+N_walkers = 400
 alpha_guess = 1.2
 
 # plot settings
